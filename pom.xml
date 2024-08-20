@@ -10,6 +10,7 @@
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
+  <relativePath/>
 
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
@@ -56,13 +57,7 @@
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
-
-        </configuration>
-      </plugin>
-    </plugins>
-<reporting>
-   <plugins>
- <reportPlugins>
+          <reportPlugins>
             <plugin>
               <artifactId>maven-checkstyle-plugin</artifactId>
             </plugin>
@@ -93,10 +88,10 @@
               <artifactId>taglist-maven-plugin</artifactId>
             </plugin>
           </reportPlugins>
+        </configuration>
+      </plugin>
+    </plugins>
 
-   </plugins>
- </reporting> 
-                    
     <pluginManagement>
       <plugins>
         <plugin>
