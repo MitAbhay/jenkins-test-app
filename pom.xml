@@ -41,7 +41,7 @@
                     <plugin>
                    <groupId>org.apache.maven.plugins</groupId>
                    <artifactId>maven-war-plugin</artifactId>
-                   <version>3.6</version>
+                   <version>3.3.2</version>
                    <configuration>
                        <failOnMissingWebXml>false</failOnMissingWebXml>
                    </configuration>
@@ -56,7 +56,37 @@
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
+          <reportPlugins>
+            <plugin>
+              <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
 
+            <plugin>
+              <artifactId>maven-jxr-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+              <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+              <artifactId>maven-pmd-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+              <artifactId>maven-surefire-report-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>findbugs-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>taglist-maven-plugin</artifactId>
+            </plugin>
+          </reportPlugins>
         </configuration>
       </plugin>
     </plugins>
@@ -137,41 +167,8 @@
         </plugin>
       </plugins>
     </pluginManagement>
-
   </build>
-   <reporting>
-   <plugins>
-            <plugin>
-              <artifactId>maven-checkstyle-plugin</artifactId>
-            </plugin>
 
-            <plugin>
-              <artifactId>maven-jxr-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <artifactId>maven-javadoc-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <artifactId>maven-pmd-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <artifactId>maven-surefire-report-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>findbugs-maven-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>taglist-maven-plugin</artifactId>
-            </plugin>
-   </plugins>
-   </reporting> 
   <dependencyManagement>
     <dependencies>
       <dependency>
